@@ -1,0 +1,5 @@
+My name is Dare Daniel Omole.I am a Software QA Analyst . In this role, I am responsible for testing web apps, mobile apps and API.
+
+I also write test cases, test scripts and perform functional, end-to-end, regression, and exploratory testing 
+
+also familiar with the use of test management tool such as JIRA.
