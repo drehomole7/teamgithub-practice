@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "e43f2956-a006-4002-a1e2-d9fa003a08d6",
+		"name": "REST API basics: CRUD, test & variable",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33448002"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code should be 200\", function () {",
+							"pm.test(\"Status code name should have an OK string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{\"collection\":{\"info\":{\"_postman_id\":\"8ed1a723-7194-4433-9aef-352e9b86d1e0\",\"name\":\"STSTStudentCourse\",\"schema\":\"https://schema.getpostman.com/json/collection/v2.1.0/collection.json\",\"updatedAt\":\"2023-06-28T09:08:14.000Z\",\"uid\":\"3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0\",\"createdAt\":null,\"lastUpdatedBy\":null},\"item\":[{\"name\":\"Get All Todo Entries\",\"item\":[{\"name\":\"Get All Todo Entries\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"6ac5a49a-3baa-4284-9644-a100f39659e5\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"35b316c7-c1b2-486c-ae61-a4350f5955a6\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\"},\"url\":{\"raw\":\"https://demo.fusio-project.org/index.php\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"type\":\"text\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-35b316c7-c1b2-486c-ae61-a4350f5955a6\"}],\"id\":\"9b93199a-54f9-4394-8147-787c8d207581\",\"uid\":\"3865219-9b93199a-54f9-4394-8147-787c8d207581\"},{\"name\":\"Get All Entries\",\"item\":[{\"name\":\"Get All Entries\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"444ff167-cf84-4d3d-9cb6-151265f23145\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"cb151585-e902-4c4e-85a5-d73bfbb5378d\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://demo.fusio-project.org/index.php/\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\",\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https://demo.fusio-project.org/index.php/\"},\"response\":[],\"uid\":\"3865219-cb151585-e902-4c4e-85a5-d73bfbb5378d\"}],\"id\":\"9e3d0e73-ea72-4031-804d-b509c26fbe4f\",\"uid\":\"3865219-9e3d0e73-ea72-4031-804d-b509c26fbe4f\"},{\"name\":\"Get entry per ID\",\"item\":[{\"name\":\"Get entry per ID - Valid ID\",\"id\":\"f74958f9-7696-4e9d-8e5c-0b12c86cdf08\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\"},\"url\":{\"raw\":\"https://demo.fusio-project.org/index.php\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https://demo.fusio-project.org/index.php/todo/:todo_id\"},\"response\":[],\"uid\":\"3865219-f74958f9-7696-4e9d-8e5c-0b12c86cdf08\"},{\"name\":\"Get entry per ID - Invalid ID(params not using TODO ID)\",\"id\":\"44f0debc-d813-4893-99b4-02a46ef6c6e4\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://demo.fusio-project.org/\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https://demo.fusio-project.org/index.php/todo/:todo_id\"},\"response\":[],\"uid\":\"3865219-44f0debc-d813-4893-99b4-02a46ef6c6e4\"}],\"id\":\"4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\",\"uid\":\"3865219-4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\"},{\"name\":\"Get Books\",\"item\":[{\"name\":\"Get All Books\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"1e222d8c-f15a-4f39-a06a-506623c88b2b\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"287f5de6-99e1-4c48-8fc4-f2853f1b3a49\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://simple-books-api.glitch.me/books\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-287f5de6-99e1-4c48-8fc4-f2853f1b3a49\"},{\"name\":\"Get Books by ID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"1e222d8c-f15a-4f39-a06a-506623c88b2b\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"a73df619-3b0b-42c2-95bc-e382c237e0af\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://simple-books-api.glitch.me/books/:bookId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\",\":bookId\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}],\"variable\":[{\"key\":\"bookId\",\"value\":\"1\"}]}},\"response\":[],\"uid\":\"3865219-a73df619-3b0b-42c2-95bc-e382c237e0af\"},{\"name\":\"Get Books by Type\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"8206d0b0-80cc-4104-9a65-e26a2c4dcb71\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"2e9c43e6-2d2d-4ed0-8179-99b71d383752\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://simple-books-api.glitch.me/books?type=fiction\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\"],\"query\":[{\"key\":\"type\",\"value\":\"fiction\"}]}},\"response\":[],\"uid\":\"3865219-2e9c43e6-2d2d-4ed0-8179-99b71d383752\"}],\"id\":\"2332af1e-595d-45c1-b4a1-c35f4a91b8f0\",\"uid\":\"3865219-2332af1e-595d-45c1-b4a1-c35f4a91b8f0\"},{\"name\":\"Place a book order\",\"item\":[{\"name\":\"Place a book order - using book ID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"ec3714ed-dd91-4945-ba58-41e7bfb0ffb6\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"fddcc018-7c64-46e2-9c9f-18e2dda8ed74\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"bookId\\\": 1,\\n    \\\"customerName\\\": \\\"Testify Academy\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\"]}},\"response\":[],\"uid\":\"3865219-fddcc018-7c64-46e2-9c9f-18e2dda8ed74\"}],\"id\":\"abb69db3-6db9-48cb-8f97-0e3d7a8bd9d2\",\"uid\":\"3865219-abb69db3-6db9-48cb-8f97-0e3d7a8bd9d2\"},{\"name\":\"Get an order\",\"item\":[{\"name\":\"Get all orders\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"786067ba-f1c5-430f-a501-447764f71666\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"832ba353-85ae-4fba-9b7d-ec8c8a83d26a\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-832ba353-85ae-4fba-9b7d-ec8c8a83d26a\"},{\"name\":\"Get an order - using orderID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"39f96a54-f332-430b-b6e4-3f3a559c0f3d\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"5fe04728-31dc-4573-8d20-94660d33072b\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/:orderId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\":orderId\"],\"variable\":[{\"key\":\"orderId\",\"value\":\"AaX7WGCUeHH3lRwGRh57M\"}]}},\"response\":[],\"uid\":\"3865219-5fe04728-31dc-4573-8d20-94660d33072b\"}],\"id\":\"1923b2ce-12bf-49a8-98aa-8783109db30a\",\"uid\":\"3865219-1923b2ce-12bf-49a8-98aa-8783109db30a\"},{\"name\":\"Update an order\",\"item\":[{\"name\":\"Update an order\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"786067ba-f1c5-430f-a501-447764f71666\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"072f062e-75dc-418b-ac45-45c53ebed6d5\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"bookId\\\": 1,\\n    \\\"customerName\\\": \\\"Testify Academy\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-072f062e-75dc-418b-ac45-45c53ebed6d5\"}],\"id\":\"b9368e4a-3d87-4998-aa87-ecf75942452b\",\"uid\":\"3865219-b9368e4a-3d87-4998-aa87-ecf75942452b\"},{\"name\":\"Delete an order\",\"item\":[{\"name\":\"Delete an order\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"053fe16f-510c-4769-8857-4f7bbd5ea4a2\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"cc2e75db-a89d-4b29-b7dc-d849dfc958ed\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"DELETE\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/:orderId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\":orderId\"],\"variable\":[{\"key\":\"orderId\",\"value\":\"rObASEWYlVrRX6cTAEgbt\"}]}},\"response\":[],\"uid\":\"3865219-cc2e75db-a89d-4b29-b7dc-d849dfc958ed\"}],\"id\":\"ddc02346-095e-46ab-af17-9e9e39b42233\",\"uid\":\"3865219-ddc02346-095e-46ab-af17-9e9e39b42233\"},{\"name\":\"Register API Client\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"2ee03ab9-5a32-4479-85e8-860b94af3c69\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"7ca17152-b133-47f7-9002-5162cf6171ff\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"oauth2\",\"oauth2\":[{\"key\":\"accessTokenUrl\",\"value\":\"https://demo.fusio-project.org/\",\"type\":\"string\"},{\"key\":\"tokenName\",\"value\":\"Authority\",\"type\":\"string\"},{\"key\":\"client_authentication\",\"value\":\"header\",\"type\":\"string\"},{\"key\":\"grant_type\",\"value\":\"client_credentials\",\"type\":\"string\"},{\"key\":\"addTokenTo\",\"value\":\"header\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n   \\\"clientName\\\": \\\"Ibironke\\\",\\n   \\\"clientEmail\\\": \\\"ibironkeyekinni@gmail.com\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/api-clients/\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"api-clients\",\"\"],\"query\":[{\"key\":\"\",\"value\":null,\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-7ca17152-b133-47f7-9002-5162cf6171ff\"},{\"name\":\"Get API Status\",\"id\":\"d559af1e-04d2-4ef4-9a45-a5dff819ae2b\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://simple-books-api.glitch.me/status\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"status\"]}},\"response\":[],\"uid\":\"3865219-d559af1e-04d2-4ef4-9a45-a5dff819ae2b\"}]}}",
+					"protocol": "{\"collection\":{\"info\":{\"_postman_id\":\"8ed1a723-7194-4433-9aef-352e9b86d1e0\",\"name\":\"STSTStudentCourse\",\"schema\":\"https",
+					"host": [
+						"schema",
+						"getpostman",
+						"com"
+					],
+					"path": [
+						"json",
+						"collection",
+						"v2.1.0",
+						"collection.json\",\"updatedAt\":\"2023-06-28T09:08:14.000Z\",\"uid\":\"3865219-8ed1a723-7194-4433-9aef-352e9b86d1e0\",\"createdAt\":null,\"lastUpdatedBy\":null},\"item\":[{\"name\":\"Get All Todo Entries\",\"item\":[{\"name\":\"Get All Todo Entries\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"6ac5a49a-3baa-4284-9644-a100f39659e5\",\"exec\":[\"\"],\"type\":\"text",
+						"javascript\"}}],\"id\":\"35b316c7-c1b2-486c-ae61-a4350f5955a6\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\"},\"url\":{\"raw\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"type\":\"text\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-35b316c7-c1b2-486c-ae61-a4350f5955a6\"}],\"id\":\"9b93199a-54f9-4394-8147-787c8d207581\",\"uid\":\"3865219-9b93199a-54f9-4394-8147-787c8d207581\"},{\"name\":\"Get All Entries\",\"item\":[{\"name\":\"Get All Entries\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"444ff167-cf84-4d3d-9cb6-151265f23145\",\"exec\":[\"\"],\"type\":\"text",
+						"javascript\"}}],\"id\":\"cb151585-e902-4c4e-85a5-d73bfbb5378d\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php",
+						"\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\",\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php",
+						"\"},\"response\":[],\"uid\":\"3865219-cb151585-e902-4c4e-85a5-d73bfbb5378d\"}],\"id\":\"9e3d0e73-ea72-4031-804d-b509c26fbe4f\",\"uid\":\"3865219-9e3d0e73-ea72-4031-804d-b509c26fbe4f\"},{\"name\":\"Get entry per ID\",\"item\":[{\"name\":\"Get entry per ID - Valid ID\",\"id\":\"f74958f9-7696-4e9d-8e5c-0b12c86cdf08\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\"},\"url\":{\"raw\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"index.php\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php",
+						"todo",
+						":todo_id\"},\"response\":[],\"uid\":\"3865219-f74958f9-7696-4e9d-8e5c-0b12c86cdf08\"},{\"name\":\"Get entry per ID - Invalid ID(params not using TODO ID)\",\"id\":\"44f0debc-d813-4893-99b4-02a46ef6c6e4\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"\",\"protocol\":\"https\",\"host\":[\"demo\",\"fusio-project\",\"org\"],\"path\":[\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]},\"description\":\"https:",
+						"",
+						"demo.fusio-project.org",
+						"index.php",
+						"todo",
+						":todo_id\"},\"response\":[],\"uid\":\"3865219-44f0debc-d813-4893-99b4-02a46ef6c6e4\"}],\"id\":\"4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\",\"uid\":\"3865219-4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\"},{\"name\":\"Get Books\",\"item\":[{\"name\":\"Get All Books\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"1e222d8c-f15a-4f39-a06a-506623c88b2b\",\"exec\":[\"\"],\"type\":\"text",
+						"javascript\"}}],\"id\":\"287f5de6-99e1-4c48-8fc4-f2853f1b3a49\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+						"",
+						"simple-books-api.glitch.me",
+						"books\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-287f5de6-99e1-4c48-8fc4-f2853f1b3a49\"},{\"name\":\"Get Books by ID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"1e222d8c-f15a-4f39-a06a-506623c88b2b\",\"exec\":[\"\"],\"type\":\"text",
+						"javascript\"}}],\"id\":\"a73df619-3b0b-42c2-95bc-e382c237e0af\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+						"",
+						"simple-books-api.glitch.me",
+						"books",
+						":bookId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\",\":bookId\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}],\"variable\":[{\"key\":\"bookId\",\"value\":\"1\"}]}},\"response\":[],\"uid\":\"3865219-a73df619-3b0b-42c2-95bc-e382c237e0af\"},{\"name\":\"Get Books by Type\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"8206d0b0-80cc-4104-9a65-e26a2c4dcb71\",\"exec\":[\"\"],\"type\":\"text",
+						"javascript\"}}],\"id\":\"2e9c43e6-2d2d-4ed0-8179-99b71d383752\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+						"",
+						"simple-books-api.glitch.me",
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fiction\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\"],\"query\":[{\"key\":\"type\",\"value\":\"fiction\"}]}},\"response\":[],\"uid\":\"3865219-2e9c43e6-2d2d-4ed0-8179-99b71d383752\"}],\"id\":\"2332af1e-595d-45c1-b4a1-c35f4a91b8f0\",\"uid\":\"3865219-2332af1e-595d-45c1-b4a1-c35f4a91b8f0\"},{\"name\":\"Place a book order\",\"item\":[{\"name\":\"Place a book order - using book ID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"ec3714ed-dd91-4945-ba58-41e7bfb0ffb6\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"fddcc018-7c64-46e2-9c9f-18e2dda8ed74\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"bookId\\\": 1,\\n    \\\"customerName\\\": \\\"Testify Academy\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\"]}},\"response\":[],\"uid\":\"3865219-fddcc018-7c64-46e2-9c9f-18e2dda8ed74\"}],\"id\":\"abb69db3-6db9-48cb-8f97-0e3d7a8bd9d2\",\"uid\":\"3865219-abb69db3-6db9-48cb-8f97-0e3d7a8bd9d2\"},{\"name\":\"Get an order\",\"item\":[{\"name\":\"Get all orders\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"786067ba-f1c5-430f-a501-447764f71666\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"832ba353-85ae-4fba-9b7d-ec8c8a83d26a\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-832ba353-85ae-4fba-9b7d-ec8c8a83d26a\"},{\"name\":\"Get an order - using orderID\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"39f96a54-f332-430b-b6e4-3f3a559c0f3d\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"5fe04728-31dc-4573-8d20-94660d33072b\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"GET\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/:orderId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\":orderId\"],\"variable\":[{\"key\":\"orderId\",\"value\":\"AaX7WGCUeHH3lRwGRh57M\"}]}},\"response\":[],\"uid\":\"3865219-5fe04728-31dc-4573-8d20-94660d33072b\"}],\"id\":\"1923b2ce-12bf-49a8-98aa-8783109db30a\",\"uid\":\"3865219-1923b2ce-12bf-49a8-98aa-8783109db30a\"},{\"name\":\"Update an order\",\"item\":[{\"name\":\"Update an order\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"786067ba-f1c5-430f-a501-447764f71666\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"072f062e-75dc-418b-ac45-45c53ebed6d5\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n    \\\"bookId\\\": 1,\\n    \\\"customerName\\\": \\\"Testify Academy\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\"\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-072f062e-75dc-418b-ac45-45c53ebed6d5\"}],\"id\":\"b9368e4a-3d87-4998-aa87-ecf75942452b\",\"uid\":\"3865219-b9368e4a-3d87-4998-aa87-ecf75942452b\"},{\"name\":\"Delete an order\",\"item\":[{\"name\":\"Delete an order\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"053fe16f-510c-4769-8857-4f7bbd5ea4a2\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"cc2e75db-a89d-4b29-b7dc-d849dfc958ed\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"bearer\",\"bearer\":[{\"key\":\"token\",\"value\":\"540bd43cf706368d43ecbfd49df5a059c92c9f3306de459bf39c3a29b96ebfe5\",\"type\":\"string\"}]},\"method\":\"DELETE\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/orders/:orderId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"orders\",\":orderId\"],\"variable\":[{\"key\":\"orderId\",\"value\":\"rObASEWYlVrRX6cTAEgbt\"}]}},\"response\":[],\"uid\":\"3865219-cc2e75db-a89d-4b29-b7dc-d849dfc958ed\"}],\"id\":\"ddc02346-095e-46ab-af17-9e9e39b42233\",\"uid\":\"3865219-ddc02346-095e-46ab-af17-9e9e39b42233\"},{\"name\":\"Register API Client\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"2ee03ab9-5a32-4479-85e8-860b94af3c69\",\"exec\":[\"\"],\"type\":\"text/javascript\"}}],\"id\":\"7ca17152-b133-47f7-9002-5162cf6171ff\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"auth\":{\"type\":\"oauth2\",\"oauth2\":[{\"key\":\"accessTokenUrl\",\"value\":\"https://demo.fusio-project.org/\",\"type\":\"string\"},{\"key\":\"tokenName\",\"value\":\"Authority\",\"type\":\"string\"},{\"key\":\"client_authentication\",\"value\":\"header\",\"type\":\"string\"},{\"key\":\"grant_type\",\"value\":\"client_credentials\",\"type\":\"string\"},{\"key\":\"addTokenTo\",\"value\":\"header\",\"type\":\"string\"}]},\"method\":\"POST\",\"header\":[],\"body\":{\"mode\":\"raw\",\"raw\":\"{\\n   \\\"clientName\\\": \\\"Ibironke\\\",\\n   \\\"clientEmail\\\": \\\"ibironkeyekinni@gmail.com\\\"\\n}\",\"options\":{\"raw\":{\"language\":\"json\"}}},\"url\":{\"raw\":\"https://simple-books-api.glitch.me/api-clients/\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"api-clients\",\"\"],\"query\":[{\"key\":\"\",\"value\":null,\"disabled\":true}]}},\"response\":[],\"uid\":\"3865219-7ca17152-b133-47f7-9002-5162cf6171ff\"},{\"name\":\"Get API Status\",\"id\":\"d559af1e-04d2-4ef4-9a45-a5dff819ae2b\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https://simple-books-api.glitch.me/status\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"status\"]}},\"response\":[],\"uid\":\"3865219-d559af1e-04d2-4ef4-9a45-a5dff819ae2b\"}]}}"
+						}
+					],
+					"variable": [
+						{
+							"key": "todo_id\"},\"response\":[],\"uid\":\"3865219-f74958f9-7696-4e9d-8e5c-0b12c86cdf08\"},{\"name\":\"Get entry per ID - Invalid ID(params not using TODO ID)\",\"id\":\"44f0debc-d813-4893-99b4-02a46ef6c6e4\",\"protocolProfileBehavior\":{\"disableBodyPruning\":true},\"request\":{\"method\":\"GET\",\"header\":[],\"url\":{\"raw\":\"https:",
+							"value": ""
+						},
+						{
+							"key": "todo_id\"},\"response\":[],\"uid\":\"3865219-44f0debc-d813-4893-99b4-02a46ef6c6e4\"}],\"id\":\"4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\",\"uid\":\"3865219-4d8d5e39-2ff6-4f9a-a79d-6b7d2d285565\"},{\"name\":\"Get Books\",\"item\":[{\"name\":\"Get All Books\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"1e222d8c-f15a-4f39-a06a-506623c88b2b\",\"exec\":[\"\"],\"type\":\"text",
+							"value": ""
+						},
+						{
+							"key": "bookId\",\"protocol\":\"https\",\"host\":[\"simple-books-api\",\"glitch\",\"me\"],\"path\":[\"books\",\":bookId\"],\"query\":[{\"key\":\"\",\"value\":\"\",\"disabled\":true}],\"variable\":[{\"key\":\"bookId\",\"value\":\"1\"}]}},\"response\":[],\"uid\":\"3865219-a73df619-3b0b-42c2-95bc-e382c237e0af\"},{\"name\":\"Get Books by Type\",\"event\":[{\"listen\":\"test\",\"script\":{\"id\":\"8206d0b0-80cc-4104-9a65-e26a2c4dcb71\",\"exec\":[\"\"],\"type\":\"text",
+							"value": ""
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Post data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
